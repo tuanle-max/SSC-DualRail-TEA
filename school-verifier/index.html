@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Verifier - Prototype C</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Payment Verification</h1>
+            <p class="subtitle">Secure Blockchain Reconciliation</p>
+            
+            <div class="input-group">
+                <label>Cardano Transaction Hash (txHash)</label>
+                <input type="text" id="txHash" placeholder="Enter anchoring txHash..." value="bd08227e2682f57882afe8660b443434fec9ca533cb9a61d8b4a7d2c4a927b7f">
+            </div>
+            
+            <div class="input-group">
+                <label>Invoice ID</label>
+                <input type="text" id="invoiceId" placeholder="TXN-..." value="TXN-F5094717">
+            </div>
+            
+            <div class="input-group">
+                <label>Student ID</label>
+                <input type="text" id="studentId" placeholder="STU..." value="STU97907">
+            </div>
+            
+            <div class="input-group">
+                <label>Amount (VND)</label>
+                <input type="number" id="amount" placeholder="e.g. 150000" value="329000">
+            </div>
+            
+            <button id="verifyBtn" onclick="verifyPayment()">Verify Payment</button>
+            
+            <div id="resultBox" class="result-box hidden">
+                <div id="resultIcon"></div>
+                <div id="resultMessage"></div>
+                <div id="resultTime" class="metric"></div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
